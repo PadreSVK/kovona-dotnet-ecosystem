@@ -1,5 +1,7 @@
-﻿[*.cs]
+﻿root = true
+
+[*.cs]
 
 # CA1507: Use nameof to express symbol names
 dotnet_diagnostic.CA1507.severity = error
-dotnet_diagnostic.RCS0010.severity = error
+dotnet_diagnostic.RCS0010.severity = warning

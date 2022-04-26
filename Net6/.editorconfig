@@ -1,0 +1,4 @@
+[*.cs]
+
+# overide analyzers from "root"
+# dotnet_diagnostic.RCS0010.severity = error
