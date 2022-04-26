@@ -3,5 +3,14 @@
 [*.cs]
 
 # CA1507: Use nameof to express symbol names
-dotnet_diagnostic.CA1507.severity = error
-dotnet_diagnostic.RCS0010.severity = warning
+dotnet_diagnostic.CA1507.severity=error
+dotnet_diagnostic.RCS0010.severity=warning
+dotnet_diagnostic.CA1032.severity=suggestion
+
+[*.{cs,vb}]
+dotnet_diagnostic.CA1044.severity=error
+dotnet_diagnostic.CA1060.severity=error
+dotnet_diagnostic.CA1305.severity=warning
+
+# format only => do not affect build
+csharp_new_line_before_else=false
