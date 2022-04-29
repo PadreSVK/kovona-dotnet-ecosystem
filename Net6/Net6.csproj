@@ -5,21 +5,45 @@
     <TargetFramework>net6.0</TargetFramework>
     <!--<ImplicitUsings>enable</ImplicitUsings>-->
     <Nullable>enable</Nullable>
+    <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="appsettings.json" />
+    <AdditionalFiles Include="appsettings.json" />
+  </ItemGroup>
+
+  <!--remove from roslyn compilation-->
+  <!--<ItemGroup>
+    <Compile Remove="Test.cs" />
+    <None Include="Test.cs" />
+  </ItemGroup>-->
+
+  <!-- other project dependencies -->
   <ItemGroup>
     <ProjectReference Include="..\TestLibrary\TestLibrary.csproj" />
   </ItemGroup>
 
+  <!--roslyn analyzers-->
   <ItemGroup>
-    <PackageReference Include="Roslynator.Analyzers" Version="4.1.0">
+    <PackageReference Include="Roslynator.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Roslynator.Formatting.Analyzers" Version="4.1.0">
+    <PackageReference Include="Roslynator.Formatting.Analyzers">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
+  </ItemGroup>
+
+  <!--runtime dependencies-->
+  <ItemGroup>
+    <PackageReference Include="Serilog.Sinks.File" />
+
+  </ItemGroup>
+  <!--source generator-->
+  <ItemGroup>
+    <PackageReference Include="JsonByExampleGenerator" />
   </ItemGroup>
 
 </Project>

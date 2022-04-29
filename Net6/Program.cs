@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
 using System.Collections.Generic;
+using Net6.Json.Appsettings;
+using Serilog;
 using TestLibrary;
 
 namespace Net6
@@ -15,8 +17,18 @@ namespace Net6
 
             }
 
+            var foo = new Foo();
+
             Console.WriteLine("Hello, World! net6");
             Console.WriteLine(Class1.Test);
+
+            var appsetting = new Appsetting();
+
+            var collections = appsetting.MyAwesomeConfig.PeopleA;
+
+
+
+            Log.Logger = new LoggerConfiguration().CreateLogger();
         }
     }
 }
