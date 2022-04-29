@@ -1,0 +1,8 @@
+<Project>
+    <Target Name="BeforeDisplayMessages" AfterTargets="BeforeBuild">
+        <Message Text="Hello from csproj $(MyProperty) before build" Importance="high" />
+    </Target>
+    <Target Name="AfterDisplayMessages" AfterTargets="AfterBuild">
+        <Message Text="Hello from csproj $(MyProperty) After build" Importance="high" />
+    </Target>
+</Project>

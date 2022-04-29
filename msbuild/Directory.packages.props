@@ -1,0 +1,5 @@
+<Project>
+  <ItemGroup>
+    <PackageVersion Include="Scrutor" Version="3.3.0" />
+  </ItemGroup>
+</Project>

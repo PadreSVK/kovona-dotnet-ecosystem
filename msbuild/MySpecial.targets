@@ -1,0 +1,5 @@
+<Project>
+    <Target Name="DisplayMessages" AfterTargets="AfterBuild">
+        <Message Text="Hello from MySpecialTargets $(MyProperty)" Importance="high" />
+    </Target>
+</Project>

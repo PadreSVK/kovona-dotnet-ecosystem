@@ -1,0 +1,3 @@
+<Project>
+    <!-- empty => ovveride parent Directory.build.targets with empty targets -->
+</Project>
