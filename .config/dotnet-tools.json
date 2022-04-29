@@ -7,6 +7,12 @@
       "commands": [
         "dotnetsay"
       ]
+    },
+    "dotnet.rename": {
+      "version": "1.0.5",
+      "commands": [
+        "dotnet-rename"
+      ]
     }
   }
 }
