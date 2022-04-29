@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using TestLibrary;
 
-namespace NetFramework
+namespace Net6
 {
     public static class Program
     {
