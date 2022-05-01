@@ -24,7 +24,6 @@ function AddTodo({ add }) {
     const [text, setText] = useState("");
 
     const onTextChange = (e) => {
-        console.log("set")
         setText(e.target.value)
     }
 
